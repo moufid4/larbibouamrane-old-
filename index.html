@@ -158,7 +158,7 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Pour une consultation gratuite dès aujourd'hui</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Prenez un rendez-vous!</a>
+                <a href="#" class="btn btn-default btn-xl wow tada"  data-toggle="modal" data-target="#myModal">Prenez un rendez-vous!</a>
             </div>
         </div>
     </aside>
@@ -192,6 +192,30 @@
             </div>    
         </div>
     </section>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Prise de rendez-vous</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+        <button type="button" class="btn btn-primary">Prendre un rendez-vous</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal -->
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
