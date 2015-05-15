@@ -27,12 +27,23 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+   <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+    <!-- jquery datetimepicker -->
+    <script src="js/jquery.datetimepicker.js"></script>
+    <!-- datetimepicker css -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
 
 </head>
 
@@ -204,7 +215,21 @@
         <h4 class="modal-title text-center" id="myModalLabel">Prise de rendez-vous</h4>
       </div>
       <div class="modal-body">
-        ...
+        <input id="datetimepicker" type="text" >
+        <script>
+            
+            jQuery('#datetimepicker').datetimepicker({
+                  lang:'fr',
+                allowTimes:['08:00', '08:30', '09:00','09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00','14:30', '15:00', '15:30','16:00','16:30'],
+                minTime:'8:00',
+                maxTime:'17:00',
+
+                
+                minDate: 0,
+
+            });
+        </script>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
@@ -217,19 +242,7 @@
 <!-- modal -->
 
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
+ 
 
 </body>
 
