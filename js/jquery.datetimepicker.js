@@ -462,8 +462,8 @@
 		inline: true,
 		theme: '',
 
-		onSelectDate: function () {},
-		onSelectTime: function () {},
+		onSelectDate: function (ct) {},
+		onSelectTime: function (ct) {},
 		onChangeMonth: function () {},
 		onChangeYear: function () {},
 		onChangeDateTime: function () {},
