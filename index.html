@@ -24,8 +24,6 @@
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
 
-    
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -36,6 +34,7 @@
     <script src="js/jquery.datetimepicker.js"></script>
     <!-- datetimepicker css -->
     <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
+    
 
 </head>
 
@@ -208,23 +207,6 @@
       </div>
       <div class="modal-body">
         <input id="datetimepicker" type="text" >
-        <script>
-            
-            jQuery('#datetimepicker').datetimepicker({
-                onSelectDate: function (ct) {console.log('you selfdsected' + ct.dateFormat('d/m/Y'))},
-                onSelectTime: function (ct) {console.log('you selected' + ct.dateFormat('H:i'))},
-                lang:'fr',
-                onGenerate:function( ct ){
-                jQuery(this).find('.xdsoft_date.xdsoft_weekend')
-                  .addClass('xdsoft_disabled');
-                  },
-              weekends:[],
-              timepicker:true
-                
-
-            });
-        </script>
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
@@ -248,6 +230,8 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
 
+    <!-- appointments -->
+    <script src="js/appointment.js"></script>
 
  
 
