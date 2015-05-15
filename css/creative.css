@@ -51,6 +51,14 @@ p {
     line-height: 1.5;
 }
 
+.img-profile {
+    vertical-align: super;
+}
+
+.text-profile {
+    font-weight: 300;
+}
+
 .bg-primary {
     background-color: #303030;
     padding-top: 20px;
