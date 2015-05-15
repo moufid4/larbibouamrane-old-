@@ -441,7 +441,7 @@
 		formatDate:	'Y/m/d',
 
 		startDate:	false, // new Date(), '1986/12/08', '-1970/01/05','-1970/01/05',
-		step: 60,
+		step: 30,
 		monthChangeSpinner: true,
 
 		closeOnDateSelect: false,
@@ -456,15 +456,16 @@
 		defaultTime: false,	// use formatTime format (ex. '10:00' for formatTime:	'H:i')
 		defaultDate: false,	// use formatDate format (ex new Date() or '1986/12/08' or '-1970/01/05' or '-1970/01/05')
 
-		minDate: false,
+        minDate: 0,
 		maxDate: false,
-		minTime: false,
-		maxTime: false,
+		minTime:'8:00',
+        maxTime:'17:00',
 
-		allowTimes: [],
+		allowTimes:['08:00', '08:30', '09:00','09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00','14:30', '15:00', '15:30','16:00','16:30'],
+                
 		opened: false,
 		initTime: true,
-		inline: false,
+		inline: true,
 		theme: '',
 
 		onSelectDate: function () {},
