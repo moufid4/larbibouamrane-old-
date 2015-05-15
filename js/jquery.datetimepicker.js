@@ -434,21 +434,17 @@
             }
 		},
 		value: '',
-		lang: 'en',
-
+		lang: 'fr',
 		format:	'Y/m/d H:i',
 		formatTime:	'H:i',
 		formatDate:	'Y/m/d',
-
 		startDate:	false, // new Date(), '1986/12/08', '-1970/01/05','-1970/01/05',
 		step: 30,
 		monthChangeSpinner: true,
-
 		closeOnDateSelect: false,
 		closeOnTimeSelect: true,
 		closeOnWithoutClick: true,
 		closeOnInputClick: true,
-
 		timepicker: true,
 		datepicker: true,
 		weeks: false,
@@ -460,9 +456,7 @@
 		maxDate: false,
 		minTime:'8:00',
         maxTime:'17:00',
-
-		allowTimes:['08:00', '08:30', '09:00','09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00','14:30', '15:00', '15:30','16:00','16:30'],
-                
+		allowTimes:['08:00', '08:30', '09:00','09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00','14:30', '15:00', '15:30','16:00','16:30'],       
 		opened: false,
 		initTime: true,
 		inline: true,
@@ -1503,7 +1497,7 @@
 								classes.push('xdsoft_today');
 							}
 
-							if (start.getDay() === 0 || start.getDay() === 6 || options.weekends.indexOf(start.dateFormat(options.formatDate)) !== -1) {
+							if (start.getDay() === 5 || start.getDay() === 6 || options.weekends.indexOf(start.dateFormat(options.formatDate)) !== -1) {
 								classes.push('xdsoft_weekend');
 							}
 
