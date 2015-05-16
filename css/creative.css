@@ -189,7 +189,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/header2.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -470,6 +470,9 @@ fieldset[disabled] .btn-primary.active {
     text-shadow: none;
     color: #fff;
     background: #222;
+}
+#contact {
+    padding-bottom: 30px;
 }
 
 img::selection {
