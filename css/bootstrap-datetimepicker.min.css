@@ -291,7 +291,7 @@
 }
 .bootstrap-datetimepicker-widget table td.old,
 .bootstrap-datetimepicker-widget table td.new {
-  color: #777777;
+  color: #ADADAD;
 }
 .bootstrap-datetimepicker-widget table td.today {
   position: relative;
@@ -318,7 +318,7 @@
 .bootstrap-datetimepicker-widget table td.disabled,
 .bootstrap-datetimepicker-widget table td.disabled:hover {
   background: none;
-  color: #777777;
+  color: #393939;
   cursor: not-allowed;
 }
 .bootstrap-datetimepicker-widget table td span {
@@ -329,6 +329,7 @@
   margin: 2px 1.5px;
   cursor: pointer;
   border-radius: 4px;
+  color:#fff;
 }
 .bootstrap-datetimepicker-widget table td span:hover {
   background: #eeeeee;

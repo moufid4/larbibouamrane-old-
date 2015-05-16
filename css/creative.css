@@ -75,7 +75,7 @@ p {
 }
 
 section {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 aside {
@@ -487,4 +487,9 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+.appointment{
+    padding-top: 20px;
+    padding-bottom: 0px;
 }
