@@ -194,13 +194,15 @@
                         <script type="text/javascript">
                             $(function () {
                                 $('#datetimepicker12').datetimepicker({
+                                    
                                     locale: 'fr',
                                     inline: true,
                                     sideBySide: true,
                                     daysOfWeekDisabled:[5,6],
                                     defaultDate: moment("2015-05-17T07:00:00.196Z"),
                                     stepping:30,
-                                    enabledHours: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+                                    enabledHours: [8, 9, 10, 11, 12, 13, 14, 15, 16],
+                                    minDate:moment()
 
 
                                 });
@@ -215,7 +217,7 @@
                         <p>Téléphone: <input type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1"></p>
                         <p>Email pour la confirmation:<input type="text" class="form-control" placeholder="Email pour la confirmation" aria-describedby="basic-addon1"></p>
                         
-                        <span><input type="radio" name="f" checked> En personne</span><br />
+                        <br/><span><input type="radio" name="f" checked> En personne</span><br />
                         <span><input type="radio" name="f"> Sur Skype</span>
                       
                     </div>
