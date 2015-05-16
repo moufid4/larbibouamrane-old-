@@ -471,9 +471,6 @@ fieldset[disabled] .btn-primary.active {
     color: #fff;
     background: #222;
 }
-#contact {
-    padding-bottom: 30px;
-}
 
 
 img::selection {
