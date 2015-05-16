@@ -185,9 +185,9 @@
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
                     <p>021-96-21-76<br />021-96-21-76</p>
                 </div>
-                <div class="col-lg-3  text-center ">
+                <div class="col-lg-3  text-center">
                         
-                   <a href="skype:larbibouamrane?call"><img src="img/skype.jpg" height="42"><br /><p>Cliquez-ici pour nous joindre</p></a>
+                   <a href="skype:larbibouamrane?call" onmouseover="hover();" onmouseout="unhover();"><img id="skype" src="img/skype.jpg"  height="42" /><br /><p>Cliquez-ici pour nous joindre</p></a>
 
                 </div>       
                 <div class="col-lg-3 text-center">
@@ -200,6 +200,8 @@
             </div>    
         </div>
     </section>
+
+    
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -247,6 +249,15 @@
     <script src="js/creative.js"></script>
     <!-- appointments -->
     <script src="js/appointment.js"></script>
+
+    <script type="text/javascript">
+        function hover() {
+            skype.setAttribute('src', 'img/skypeHover.jpg');
+        };
+        function unhover() {
+            skype.setAttribute('src', 'img/skype.jpg');
+        };
+</script>
 </body>
 
 </html>
