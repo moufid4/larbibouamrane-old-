@@ -203,8 +203,15 @@
                         <script type="text/javascript">
                             $(function () {
                                 $('#datetimepicker12').datetimepicker({
+                                    locale: 'fr',
                                     inline: true,
-                                    sideBySide: true
+                                    sideBySide: true,
+                                    
+                                    defaultDate: moment("2015-05-17T07:00:00.196Z"),
+
+                                    enabledHours: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+
+
                                 });
                             });
                         </script>
