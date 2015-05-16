@@ -81,7 +81,7 @@
                 <h1>À VOTRE SERVICE DEPUIS PLUS DE 20 ANS!</h1>
                 <hr>
                 <p>Nous mettons à votre service notre passion et nos compétences pour faire valoir vos droits avec succès.</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll animated tada">En savoir plus</a>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">En savoir plus</a>
             </div>
         </div>
     </header>
@@ -161,10 +161,38 @@
             <div class="call-to-action">
                 <h2>Pour une consultation gratuite dès aujourd'hui</h2>
                 <a href="#" class="btn btn-default btn-xl wow tada"  data-toggle="modal" data-target="#myModal">Prenez un rendez-vous!</a>
+                
+                <!-- test -->
+                <a class="btn btn-default btn-xl wow tada" onclick="showContact();">Contact!</a>
             </div>
         </div>
     </aside>
+    <section id='appointment' class="hidden">
 
+
+        <p class="text-fading text-center">Si vous désirez une consultation gratuite, veuillez remplir le formulaire qui suit. Il nous fera plaisir de vous recevoir.</p><br />
+        <div class="row">
+            <div class="col-md-7">
+                <input id="datetimepicker" type="text">
+            </div>
+            <div class="col-md-5">
+               <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Nom ou Compagnie" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Email pour la confirmation" aria-describedby="basic-addon1">
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked><span> En personne</span><br />
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1"><span> En ligne (Skype)</span>
+                </div>
+                <h3 class="text-center" style="color:#ee4b28">Lundi 15 Juin 2015<br />15:30</h3>
+            </div>
+        </div>
+
+
+
+
+
+
+    </section>
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -213,22 +241,7 @@
       </div>
       <div class="modal-body">
 
-         <p class="text-fading text-center">Si vous désirez une consultation gratuite, veuillez remplir le formulaire qui suit. Il nous fera plaisir de vous recevoir.</p><br />
-        <div class="row">
-            <div class="col-md-7">
-                <input id="datetimepicker" type="text">
-            </div>
-            <div class="col-md-5">
-               <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Nom ou Compagnie" aria-describedby="basic-addon1">
-                    <input type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1">
-                    <input type="text" class="form-control" placeholder="Email pour la confirmation" aria-describedby="basic-addon1">
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked><span> En personne</span><br />
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1"><span> En ligne (Skype)</span>
-                </div>
-                <h3 class="text-center" style="color:#ee4b28">Lundi 15 Juin 2015<br />15:30</h3>
-            </div>
-        </div>
+         
 
       </div>
       <div class="modal-footer">
@@ -257,7 +270,16 @@
         function unhover() {
             skype.setAttribute('src', 'img/skype.png');
         };
-</script>
+    </script>
+    
+    <script type="text/javascript">
+    function showContact() {
+        $('#appointment').toggleClass('show hidden');
+
+    }
+    </script>
+
+    
 </body>
 
 </html>
