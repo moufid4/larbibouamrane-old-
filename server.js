@@ -29,8 +29,16 @@ var transporter = nodemailer.createTransport({
 		    from: 'Me Larbi Bouamrane <moufid4@gmail.com>', // sender address
 		    to: email, // list of receivers
 		    subject: 'Confirmation: Rendez-vous avec Me Larbi Bouamrane', // Subject line
-		    html: '<p>Bonjour '+ nom + ',' +'<br />Ceci est une confirmation de votre rendez-vous avec Me Larbi Bouamrane le ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p>Au plaisir de vous rencontrer.</p>' + '<p>Me Larbi Bouamrane<br />10, Bd Taleb Abderrahmane, Bab-El-Oued - Alger | Algérie<br />' + 'Tel: 021-96-21-96<br />' + '<a href="http://larbibouamrane.com">larbibouamrane.com</a></p>' + nom + telephone + email + user_choice// html body
+		    html: '<p>Bonjour '+ nom + ',' +'<br />Ceci est une confirmation de votre rendez-vous avec Me Larbi Bouamrane le ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p>Au plaisir de vous rencontrer.</p>' + '<p>Me Larbi Bouamrane<br />10, Bd Taleb Abderrahmane, Bab-El-Oued - Alger | Algérie<br />' + 'Tel: 021-96-21-96<br />' + '<a href="http://larbibouamrane.com">larbibouamrane.com</a></p>'// html body
 		};
+
+			var mailLarbi = {
+		    from: 'Site Web <moufid4@gmail.com>', // sender address
+		    to: 'moufid4@gmail.com', // list of receivers
+		    subject: 'Confirmation: Rendez-vous avec ' + nom, // Subject line
+		    html: '<p>Bonjour Larbi,' +'<br />Ceci est pour vous informer que vous avez un rendez-vous avec ' + nom + ' le ' + '<span style="color:red">' + date + '.</span><br />' + '<br />Nom: ' + nom + '<br />Endroit: ' + user_choice + '<br />' + 'Téléphone: ' + telephone + '<br />' + 'Email: ' + email// html body
+		};
+
 
 		transporter.sendMail(mailOptions, function(error, info){
     if(error){
@@ -38,6 +46,14 @@ var transporter = nodemailer.createTransport({
     }else{
         console.log('Message sent: ' + info.response);
     }
+
+    	transporter.sendMail(mailLarbi, function(error, info){
+    if(error){
+        console.log(error);
+    }else{
+        console.log('Message sent: ' + info.response);
+    }
+});
 
 		
 		
