@@ -26,7 +26,7 @@ $(document).ready(function(){
 		        $('#appointmentSection').toggleClass('show hidden');
 
 
-		        $("#time").html("<h3>Excellent! Votre rendez-vous avec Me Larbi Bouamrane a été pris en note.</h3>"+date);
+		        $("#time").html("<h3>Excellent! Votre rendez-vous avec Me Larbi Bouamrane est le </h3>" + date + "<h3>Vous recevrez un email de confirmation dans quelques instants.</h3>");
 
                  }
     });
