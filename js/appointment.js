@@ -9,7 +9,7 @@ $(document).ready(function(){
         email = $("#email").val();
         en_personne = $('#en_personne:checked').val();
         sur_skype = $('#sur_skype:checked').val();
-        var user_choice= en_personne || sur_skype;
+        var user_choice = en_personne || sur_skype;
 
         
 
@@ -22,11 +22,42 @@ $(document).ready(function(){
         data: JSON.stringify({nom:nom,telephone:telephone, email:email, endroit:user_choice, date:date}),
 
         success: function(data) {
-                   $('#appointment_confirmation').toggleClass('show hidden');
+                $('#appointment_confirmation').toggleClass('show hidden');
 		        $('#appointmentSection').toggleClass('show hidden');
-
-
 		        $("#time").html(date);
+
+// email confirmation
+
+        $.ajax({
+        url: 'http://localhost:3000/email',
+        type: 'post',
+          contentType: "application/json; charset=utf-8",
+
+        dataType: 'json',
+        data: JSON.stringify({nom:nom, telephone:telephone, email:email, endroit:user_choice, date:date}),
+
+    
+
+
+
+    });
+        
+
+
+// end email confirmation
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                  }
     });
@@ -46,7 +77,7 @@ $(function () {
         inline: true,
         sideBySide: true,
         daysOfWeekDisabled:[5,6],
-        defaultDate: moment("2015-05-17T07:00:00.196Z"),
+        defaultDate: moment("2015-05-21T07:00:00.196Z"),
         stepping:30,
         enabledHours: [8, 9, 10, 11, 12, 13, 14, 15, 16],
         minDate:moment()
