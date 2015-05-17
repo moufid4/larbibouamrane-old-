@@ -29,7 +29,7 @@ $(document).ready(function(){
 // email confirmation
 
         $.ajax({
-        url: 'http://localhost:3000/email',
+        url: '/email',
         type: 'post',
           contentType: "application/json; charset=utf-8",
 
