@@ -29,7 +29,7 @@ $(document).ready(function(){
 // email confirmation
 
         $.ajax({
-        url: '/email',
+        url: 'http://larbibouamrane.herokuapp.com/email',
         type: 'post',
           contentType: "application/json; charset=utf-8",
 
