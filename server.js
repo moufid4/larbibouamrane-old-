@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'moufid4@gmail.com',
+        user: 'larbibouamrane2@gmail.com',
         pass: 'Anissa95'
     }
 });
@@ -26,15 +26,15 @@ var transporter = nodemailer.createTransport({
 		var user_choice = req.body.endroit;
 
 		var mailOptions = {
-		    from: 'Me Larbi Bouamrane <moufid4@gmail.com>', // sender address
+		    from: 'Me Larbi Bouamrane <larbibouamrane2>', // sender address
 		    to: email, // list of receivers
 		    subject: 'Confirmation: Rendez-vous avec Me Larbi Bouamrane', // Subject line
 		    html: '<p>Bonjour '+ nom + ',' +'<br />Ceci est une confirmation de votre rendez-vous avec Me Larbi Bouamrane le ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p>Au plaisir de vous rencontrer.</p>' + '<p>Me Larbi Bouamrane<br />10, Bd Taleb Abderrahmane, Bab-El-Oued - Alger | Algérie<br />' + 'Tel: 021-96-21-96<br />' + '<a href="http://larbibouamrane.com">larbibouamrane.com</a></p>'// html body
 		};
 
 			var mailLarbi = {
-		    from: 'Site Web <moufid4@gmail.com>', // sender address
-		    to: 'larbibouamrane@gmail.com', // list of receivers
+		    from: 'Site Web <larbibouamrane2@gmail.com>', // sender address
+		    to: 'larbibouamrane2@gmail.com', // list of receivers
 		    subject: 'Confirmation: Rendez-vous avec ' + nom, // Subject line
 		    html: '<p>Bonjour Larbi,' +'<br />Ceci est pour vous informer que vous avez un rendez-vous avec ' + nom + ' le ' + '<span style="color:red">' + date + '.</span><br />' + '<br />Nom: ' + nom + '<br />Endroit: ' + user_choice + '<br />' + 'Téléphone: ' + telephone + '<br />' + 'Email: ' + email// html body
 		};
