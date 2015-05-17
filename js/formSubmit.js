@@ -19,10 +19,15 @@ $(document).ready(function(){
           contentType: "application/json; charset=utf-8",
 
         dataType: 'json',
-        data: JSON.stringify({nom, telephone, email, user_choice, date}),
+        data: JSON.stringify({nom:nom,telephone:telephone, email:email, endroit:user_choice, date:date}),
 
         success: function(data) {
-                   console.log("SUCCESS");
+                   $('#appointment_confirmation').toggleClass('show hidden');
+		        $('#appointmentSection').toggleClass('show hidden');
+
+
+		        $("#time").html("<h3>Excellent! Votre rendez-vous avec Me Larbi Bouamrane a été pris en note.</h3>"+date);
+
                  }
     });
 
