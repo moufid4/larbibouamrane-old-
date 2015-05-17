@@ -14,7 +14,7 @@ var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
         user: 'moufid4@gmail.com',
-        pass: ''
+        pass: 'Anissa95'
     }
 });
 
@@ -34,7 +34,7 @@ var transporter = nodemailer.createTransport({
 
 			var mailLarbi = {
 		    from: 'Site Web <moufid4@gmail.com>', // sender address
-		    to: 'moufid4@gmail.com', // list of receivers
+		    to: 'larbibouamrane@gmail.com', // list of receivers
 		    subject: 'Confirmation: Rendez-vous avec ' + nom, // Subject line
 		    html: '<p>Bonjour Larbi,' +'<br />Ceci est pour vous informer que vous avez un rendez-vous avec ' + nom + ' le ' + '<span style="color:red">' + date + '.</span><br />' + '<br />Nom: ' + nom + '<br />Endroit: ' + user_choice + '<br />' + 'Téléphone: ' + telephone + '<br />' + 'Email: ' + email// html body
 		};
