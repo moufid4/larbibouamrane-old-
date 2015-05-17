@@ -36,10 +36,11 @@
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript" src="js/localeFr.js"></script>
-    <script type="text/javascript" src="js/localeAr.js"></script>
     <script type="text/javascript" src="js/transition.js"></script>
     <script type="text/javascript" src="js/collapse.js"></script>   
 
+    <!-- form submit -->
+    <script type="text/javascript" src="js/formSubmit.js"></script>
 </head>
 
 <body id="page-top">
@@ -173,7 +174,7 @@
 <!-- appointment section -->
     <section id='appointment' class="hidden appointment animated bounceIn">
 
-    <div class="container">
+    <form class="container">
      <div class="row">       
 
            
@@ -183,15 +184,16 @@
                     
                     
                       
-                            <div class="form-group">
+                           
                                
                                         <div id="datetimepicker12"></div>
                                   
                                 
-                            </div>
+                        
                  
 
                         <script type="text/javascript">
+                            var d = "";
                             $(function () {
                                 $('#datetimepicker12').datetimepicker({
                                     
@@ -204,8 +206,14 @@
                                     enabledHours: [8, 9, 10, 11, 12, 13, 14, 15, 16],
                                     minDate:moment()
 
+                                });
+                               $(document).on('dp.change', function () {
+                                   select = $('#datetimepicker12').data("DateTimePicker").date()._d;
+                                   date = moment(select).format('Do MMMM YYYY, h:mm');
 
                                 });
+
+                                 
                             });
                         </script>
                     
@@ -213,20 +221,20 @@
 
                 <div class="col-md-4">
                    <div class="text-left">
-                        <p>Nom ou Compagnie: <input type="text" class="form-control" placeholder="Nom ou Compagnie" aria-describedby="basic-addon1"></p>
-                        <p>Téléphone: <input type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1"></p>
-                        <p>Email pour la confirmation:<input type="text" class="form-control" placeholder="Email pour la confirmation" aria-describedby="basic-addon1"></p>
+                        <p>Nom: <input id="nom" type="text" class="form-control" placeholder="Nom" aria-describedby="basic-addon1"></p>
+                        <p>Téléphone: <input id="telephone" type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1"></p>
+                        <p>Email pour la confirmation:<input id="email" type="text" class="form-control" placeholder="Email pour la confirmation" aria-describedby="basic-addon1"></p>
                         
-                        <span><input type="radio" name="f" checked> En personne</span><br />
-                        <span><input type="radio" name="f"> Sur Skype</span>
+                        <span><input id="en_personne" type="radio" name="f" value="En personne" checked> En personne</span><br />
+                        <span><input id="sur_skype" type="radio" name="f" value="Sur Skype"> Sur Skype</span>
                       
                     </div>
                 </div>
             </div>
         </div>
     <button href="#appointmentSection"  type="button" class="btn btn-inverse page-scroll" data-dismiss="modal" onclick="showAppointment()">Fermer</button>
-        <button type="button" class="btn btn-success">Confirmer</button>
-    </div>
+        <button type="submit" class="btn btn-success">Confirmer</button>
+    </form>
       
     </section>
     
@@ -272,7 +280,6 @@
             </div>    
         </div>
     </section>
-
 
   <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
