@@ -196,7 +196,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../../img/header2.jpg);
+    background-image: url(../img/header3.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -226,7 +226,7 @@ header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 18px;
     font-weight: 400;
-    color: rgba(255,255,255,.95);
+    color: rgba(255,255,255,.77);
 }
 
 @media(min-width:768px) {
