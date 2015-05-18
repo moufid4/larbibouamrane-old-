@@ -73,7 +73,7 @@ $(document).ready(function(){
 $(function () {
     $('#datetimepicker').datetimepicker({
         
-        locale: 'ar-ma',
+        locale: 'fr',
         inline: true,
         sideBySide: true,
         daysOfWeekDisabled:[5,6],
