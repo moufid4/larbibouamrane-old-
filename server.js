@@ -25,7 +25,7 @@ app.post('/email', function(req, res) {
 	    from: 'Me Larbi Bouamrane <larbibouamrane2>',
 	    to: email, // list of receivers
 	    subject: 'تأكيد: موعد مع الأستاذ العربي بوعمران',
-	    html: '<p>السلام عليكم '+ nom + ',' +'<br />هذه الرسلاة لتأكيد موعدكم مع الأستاذ العربي بوعمران العربي يوم ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p>بانتظار لقاؤكم.</p>' + '<p>الأستاذ العربي بوعمران<br />10، نهج طالب عبد الرحمان، باب الوادي | الجزائر<br />' + 'الهاتف: 021-96-21-96<br />' + '<a href="http://larbibouamrane.com">larbibouamrane.com</a></p>'
+	    html: '<p style="direction:rtl">السلام عليكم '+ nom + ',' +'<br />هذه الرسلاة لتأكيد موعدكم مع الأستاذ العربي بوعمران الذي سيكون يوم ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p>بانتظار لقاؤكم.</p>' + '<p>الأستاذ العربي بوعمران<br />10، نهج طالب عبد الرحمان، باب الوادي | الجزائر<br />' + 'الهاتف: 021-96-21-96<br />' + '<a href="http://larbibouamrane.com">larbibouamrane.com</a></p>'
 	};
 
 		var mailLarbi = {
