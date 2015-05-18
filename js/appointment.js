@@ -86,7 +86,7 @@ $(function () {
     });
    $(document).on('dp.change', function () {
        select = $('#datetimepicker').data("DateTimePicker").date()._d;
-       date = moment(select).format('dddd Do MMMM YYYY à H:mm');
+       date = moment(select).format('dddd Do MMMM YYYY على الساعة H:mm');
 
     });
 
