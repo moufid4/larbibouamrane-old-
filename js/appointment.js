@@ -25,6 +25,7 @@ $(document).ready(function(){
                 $('#appointment_confirmation').toggleClass('show hidden');
 		        $('#appointmentSection').toggleClass('show hidden');
 		        $("#time").html(date);
+                window.location.href = "#appointment_confirmation";
 
 // email confirmation
 
