@@ -63,9 +63,13 @@ var transporter = nodemailer.createTransport({
 	});
 
 
-
-
-
 app.use(express.static(__dirname + '/'));
+
+app.get('/ar', function (req, res) {
+  res.send('ar/index.html');
+});
+app.get('/en', function (req, res) {
+  res.send('en/index.html');
+});
 
 app.listen(process.env.PORT || 3000);
