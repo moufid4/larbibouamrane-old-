@@ -3,12 +3,8 @@ var app = express();
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 
-
-app.use(bodyParser.json()); // support json encoded bodies
-app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
-
-
-
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
@@ -18,50 +14,85 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-	app.post('/email', function(req, res) {
-		var nom = req.body.nom;
-		var date = req.body.date;
-		var telephone = req.body.telephone;
-		var email = req.body.email;
-		var user_choice = req.body.endroit;
+app.post('/email', function(req, res) {
+	var nom = req.body.nom;
+	var date = req.body.date;
+	var telephone = req.body.telephone;
+	var email = req.body.email;
+	var user_choice = req.body.endroit;
 
-		var mailOptions = {
-		    from: 'Me Larbi Bouamrane <larbibouamrane2>', // sender address
-		    to: email, // list of receivers
-		    subject: 'Confirmation: Rendez-vous avec Me Larbi Bouamrane', // Subject line
-		    html: '<p>Bonjour '+ nom + ',' +'<br />Ceci est une confirmation de votre rendez-vous avec Me Larbi Bouamrane le ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p>Au plaisir de vous rencontrer.</p>' + '<p>Me Larbi Bouamrane<br />10, Bd Taleb Abderrahmane, Bab-El-Oued - Alger | Algérie<br />' + 'Tel: 021-96-21-96<br />' + '<a href="http://larbibouamrane.com">larbibouamrane.com</a></p>'// html body
-		};
+	var mailOptions = {
+	    from: 'Me Larbi Bouamrane <larbibouamrane2>',
+	    to: email, // list of receivers
+	    subject: 'تأكيد: موعد مع الأستاذ العربي بوعمران',
+	    html: '<p>السلام عليكم '+ nom + ',' +'<br />هذه الرسلاة لتأكيد موعدكم مع الأستاذ العربي بوعمران العربي يوم ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p>بانتظار لقاؤكم.</p>' + '<p>الأستاذ العربي بوعمران<br />10، نهج طالب عبد الرحمان، باب الوادي | الجزائر<br />' + 'الهاتف: 021-96-21-96<br />' + '<a href="http://larbibouamrane.com">larbibouamrane.com</a></p>'
+	};
 
-			var mailLarbi = {
-		    from: 'Site Web <larbibouamrane2@gmail.com>', // sender address
-		    to: 'larbibouamrane2@gmail.com; larbibouamrane@gmail.com', // list of receivers
-		    subject: 'Confirmation: Rendez-vous avec ' + nom, // Subject line
-		    html: '<p>Bonjour Larbi,' +'<br />Ceci est pour vous informer que vous avez un rendez-vous avec ' + nom + ' le ' + '<span style="color:red">' + date + '.</span><br />' + '<br />Nom: ' + nom + '<br />Endroit: ' + user_choice + '<br />' + 'Téléphone: ' + telephone + '<br />' + 'Email: ' + email// html body
-		};
+		var mailLarbi = {
+	    from: 'Site Web <larbibouamrane2@gmail.com>', // sender address
+	    to: 'larbibouamrane2@gmail.com', // list of receivers
+	    subject: 'Nouveau rendez-vous avec ' + nom, // Subject line
+	    html: '<p>Bonjour Larbi,' +'<br />Ceci est pour vous informer que vous avez un rendez-vous avec ' + nom + ' le ' + '<span style="color:red">' + date + '.</span><br />' + '<br />Nom: ' + nom + '<br />Endroit: ' + user_choice + '<br />' + 'Téléphone: ' + telephone + '<br />' + 'Email: ' + email// html body
+	};
 
 
 		transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        console.log(error);
-    }else{
-        console.log('Message sent: ' + info.response);
-    }
+			if(error){
+			    console.log(error);
+			} else {
+			    console.log('Message sent: ' + info.response);
+			}
 
-    	transporter.sendMail(mailLarbi, function(error, info){
-    if(error){
-        console.log(error);
-    }else{
-        console.log('Message sent: ' + info.response);
-    }
-});
-
-		
-		
-		
+				transporter.sendMail(mailLarbi, function(error, info){
+			if(error){
+			    console.log(error);
+			} else {
+			    console.log('Message sent: ' + info.response);
+			}
+		});
 		});
 
-	});
+});
 
+app.post('/fr/email', function(req, res) {
+	var nom = req.body.nom;
+	var date = req.body.date;
+	var telephone = req.body.telephone;
+	var email = req.body.email;
+	var user_choice = req.body.endroit;
+
+	var mailOptions = {
+	    from: 'Me Larbi Bouamrane <larbibouamrane2>', // sender address
+	    to: email, // list of receivers
+	    subject: 'Confirmation: Rendez-vous avec Me Larbi Bouamrane', // Subject line
+	    html: '<p>Bonjour '+ nom + ',' +'<br />Ceci est une confirmation de votre rendez-vous avec Me Larbi Bouamrane le ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p>Au plaisir de vous rencontrer.</p>' + '<p>Me Larbi Bouamrane<br />10, Bd Taleb Abderrahmane, Bab-El-Oued - Alger | Algérie<br />' + 'Tel: 021-96-21-96<br />' + '<a href="http://larbibouamrane.com">larbibouamrane.com</a></p>'// html body
+	};
+
+		var mailLarbi = {
+	    from: 'Site Web <larbibouamrane2@gmail.com>', // sender address
+	    to: 'larbibouamrane2@gmail.com; larbibouamrane@gmail.com', // list of receivers
+	    subject: 'Nouveau rendez-vous avec ' + nom, // Subject line
+	    html: '<p>Bonjour Larbi,' +'<br />Ceci est pour vous informer que vous avez un rendez-vous avec ' + nom + ' le ' + '<span style="color:red">' + date + '.</span><br />' + '<br />Nom: ' + nom + '<br />Endroit: ' + user_choice + '<br />' + 'Téléphone: ' + telephone + '<br />' + 'Email: ' + email// html body
+	};
+
+
+		transporter.sendMail(mailOptions, function(error, info){
+			if(error){
+			    console.log(error);
+			} else {
+			    console.log('Message sent: ' + info.response);
+			}
+
+				transporter.sendMail(mailLarbi, function(error, info){
+			if(error){
+			    console.log(error);
+			} else {
+			    console.log('Message sent: ' + info.response);
+			}
+		});
+		});
+
+});
 
 app.use(express.static(__dirname + '/'));
 
