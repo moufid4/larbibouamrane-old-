@@ -96,8 +96,8 @@ app.post('/fr/email', function(req, res) {
 
 app.use(express.static(__dirname + '/'));
 
-app.get('/ar', function (req, res) {
-  res.send('ar/index.html');
+app.get('fr/', function (req, res) {
+  res.send('fr/index.html');
 });
 app.get('/en', function (req, res) {
   res.send('en/index.html');
