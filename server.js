@@ -22,10 +22,10 @@ app.post('/email', function(req, res) {
 	var user_choice = req.body.endroit;
 
 	var mailOptions = {
-	    from: 'Me Larbi Bouamrane <info@larbibouamrane.com>',
+	    from: 'الأستاذ العربي بوعمران <info@larbibouamrane.com>',
 	    to: email,
 	    subject: 'تأكيد: موعد مع الأستاذ العربي بوعمران',
-	    html: '<p style="direction:rtl">السلام عليكم '+ nom + '،' +'<br />هذه الرسلاة لتأكيد موعدكم مع الأستاذ العربي بوعمران الذي سيكون يوم ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p style="direction:rtl">بانتظار لقاؤكم.</p>' + '<p style="direction:rtl">الأستاذ العربي بوعمران<br />10، نهج طالب عبد الرحمان، باب الوادي | الجزائر<br />' + 'الهاتف: 77-21-96-021<br />' + '<a direction="rtl" href="http://larbibouamrane.com">larbibouamrane.com</a></p>'
+	    html: '<p style="direction:rtl">السلام عليكم '+ nom + '،' +'<br />هذه الرسلاة لتأكيد موعدكم مع الأستاذ العربي بوعمران الذي سيكون يوم ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p style="direction:rtl">بانتظار لقاؤكم.</p>' + '<p style="direction:rtl">الأستاذ العربي بوعمران العربي<br />10، نهج طالب عبد الرحمان، باب الوادي | الجزائر<br />' + 'الهاتف: 77-21-96-021<br />' + '<a direction="rtl" href="http://larbibouamrane.com">larbibouamrane.com</a></p>'
 	};
 
 		var mailLarbi = {
@@ -65,7 +65,7 @@ app.post('/fr/email', function(req, res) {
 	    from: 'Me Larbi Bouamrane <info@larbibouamrane.com>',	
 	    to: email,
 	    subject: 'Confirmation: Rendez-vous avec Me Larbi Bouamrane', // Subject line
-	    html: '<p>Bonjour '+ nom + ',' +'<br />Ceci est une confirmation de votre rendez-vous avec Me Larbi Bouamrane le ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p>Au plaisir de vous rencontrer.</p>' + '<p>Me Larbi Bouamrane<br />10, Bd Taleb Abderrahmane, Bab-El-Oued - Alger | Algérie<br />' + 'Tel: 021-96-21-96<br />' + '<a href="http://larbibouamrane.com">larbibouamrane.com</a></p>'
+	    html: '<p>Bonjour '+ nom + ',' +'<br />Ceci est une confirmation de votre rendez-vous avec Me Larbi Bouamrane le ' + '<span style="color:red">' + date + '</span>' + '.</p>' + '<p>Au plaisir de vous rencontrer.</p>' + '<p>Me Larbi Bouamrane<br />10, Bd Taleb Abderrahmane, Bab-El-Oued - Alger | Algérie<br />' + 'Tel: 021-96-21-77<br />' + '<a href="http://larbibouamrane.com">larbibouamrane.com</a></p>'
 	};
 
 		var mailLarbi = {
