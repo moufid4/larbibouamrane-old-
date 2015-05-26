@@ -78,7 +78,7 @@ $(function () {
         inline: true,
         sideBySide: true,
         daysOfWeekDisabled:[5,6],
-        defaultDate: moment("2015-05-26T07:00:00.196Z"),
+        defaultDate: moment("2015-05-29T07:00:00.196Z"),
         stepping:30,
         enabledHours: [8, 9, 10, 11, 12, 13, 14, 15, 16],
         minDate:moment()
